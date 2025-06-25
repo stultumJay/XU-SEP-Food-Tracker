@@ -11,7 +11,6 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import SecHallSolution.dao.ProductDAO;
 import SecHallSolution.model.Product;
-import SecHallSolution.util.DBUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +29,6 @@ public class ProductServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
-        // Initialize DBUtil with context params
-        DBUtil.init(getServletContext());
+        // DBUtil.init(getServletContext()); // Removed, now handled by AppContextListener
     }
 }
