@@ -1,4 +1,4 @@
-package SecHallSolution.servlet;
+package SepMallSolution.servlet;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

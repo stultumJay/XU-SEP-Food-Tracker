@@ -1,4 +1,4 @@
-package SecHallSolution.util;
+package SepMallSolution.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

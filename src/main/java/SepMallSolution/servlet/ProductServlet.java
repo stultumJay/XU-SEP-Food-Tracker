@@ -1,4 +1,4 @@
-package SecHallSolution.servlet;
+package SepMallSolution.servlet;
 
 import java.io.IOException;
 import java.util.List;
@@ -9,8 +9,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import SecHallSolution.dao.ProductDAO;
-import SecHallSolution.model.Product;
+import SepMallSolution.dao.ProductDAO;
+import SepMallSolution.model.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

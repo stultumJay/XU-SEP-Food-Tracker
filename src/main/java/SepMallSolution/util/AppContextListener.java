@@ -1,4 +1,4 @@
-package SecHallSolution.util;
+package SepMallSolution.util;
 
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;

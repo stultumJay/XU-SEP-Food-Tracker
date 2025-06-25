@@ -1,4 +1,4 @@
-package SecHallSolution.model;
+package SepMallSolution.model;
 
 import java.util.Objects;
 

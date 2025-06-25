@@ -1,4 +1,4 @@
-package SecHallSolution.dao;
+package SepMallSolution.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Base64;
 
-import SecHallSolution.model.Product;
-import SecHallSolution.util.DBUtil;
+import SepMallSolution.model.Product;
+import SepMallSolution.util.DBUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

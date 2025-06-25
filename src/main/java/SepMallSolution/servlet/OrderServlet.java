@@ -1,4 +1,4 @@
-package SecHallSolution.servlet;
+package SepMallSolution.servlet;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-import SecHallSolution.util.DBUtil;
+import SepMallSolution.util.DBUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,6 +1,6 @@
-package SecHallSolution.servlet;
+package SepMallSolution.servlet;
 
-import SecHallSolution.util.DBUtil;
+import SepMallSolution.util.DBUtil;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
