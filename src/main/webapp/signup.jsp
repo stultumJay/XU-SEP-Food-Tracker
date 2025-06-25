@@ -52,17 +52,14 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <%
-  String status = (String) request.getAttribute("status");
-  if ("success".equals(status)) {
-  %>
+  <% String status = (String) request.getAttribute("status");
+     if ("success".equals(status)) { %>
   <div id="successMessage" class="popup-message">Successfully Registered</div>
   <% } else if ("failed".equals(status)) { %>
   <div id="errorMessage" class="popup-message error">Something Went Wrong. Please Try Again</div>
   <% } %>
 
   <script>
-    // JavaScript to make pop-up disappear after 2 seconds
     window.onload = function() {
       var successMessage = document.getElementById('successMessage');
       var errorMessage = document.getElementById('errorMessage');
