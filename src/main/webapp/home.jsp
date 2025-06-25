@@ -48,7 +48,7 @@
             <% for (Product product : products) { %>
                 <div class="food-box">
                     <div class="pic">
-                        <img src="program-images/<%= product.getImageUrl() %>" class="food-img">
+                        <img src="<%= (product.getImageBase64() != null) ? ("data:image/jpeg;base64," + product.getImageBase64()) : "" %>" class="food-img">
                     </div>
                     <h2 class="food-title"><%= product.getTitle() %></h2>
                     <span class="food-price">Php.<%= product.getPrice() %></span>
