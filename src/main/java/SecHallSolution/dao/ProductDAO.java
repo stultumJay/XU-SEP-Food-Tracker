@@ -4,8 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Blob;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Base64;
 
 import SecHallSolution.model.Product;
 import SecHallSolution.util.DBUtil;
@@ -15,7 +17,7 @@ import org.slf4j.LoggerFactory;
 public class ProductDAO {
     private static final Logger logger = LoggerFactory.getLogger(ProductDAO.class);
     // SQL query as a constant, select only needed columns
-    private static final String GET_ALL_PRODUCTS = "SELECT product_name, price, image_url FROM product";
+    private static final String GET_ALL_PRODUCTS = "SELECT product_name, price, image FROM product";
 
     /**
      * Fetch all products from the database.
@@ -29,8 +31,13 @@ public class ProductDAO {
             while (rs.next()) {
                 String title = rs.getString("product_name");
                 double price = rs.getDouble("price");
-                String imageUrl = rs.getString("image_url");
-                products.add(new Product(title, price, imageUrl));
+                Blob imageBlob = rs.getBlob("image");
+                String imageBase64 = null;
+                if (imageBlob != null) {
+                    byte[] imageBytes = imageBlob.getBytes(1, (int) imageBlob.length());
+                    imageBase64 = Base64.getEncoder().encodeToString(imageBytes);
+                }
+                products.add(new Product(title, price, imageBase64));
             }
         } catch (SQLException e) {
             logger.error("Error fetching products", e);
