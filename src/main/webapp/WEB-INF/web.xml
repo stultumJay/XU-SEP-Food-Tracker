@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" version="6.0">
-  <servlet>
-    <description></description>
-    <display-name>OrderServlet</display-name>
-    <servlet-name>OrderServlet</servlet-name>
-    <servlet-class>SecHallSolution.servlet.OrderServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>OrderServlet</servlet-name>
-    <url-pattern>/OrderServlet</url-pattern>
-  </servlet-mapping>
   <display-name>SecHallSolution</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -19,15 +9,6 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
-    <servlet-name>ProductServlet</servlet-name>
-    <servlet-class>SecHallSolution.servlet.ProductServlet</servlet-class>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ProductServlet</servlet-name>
-    <url-pattern>/ProductServlet</url-pattern>
-  </servlet-mapping>
   <context-param>
     <param-name>dbUrl</param-name>
     <param-value>jdbc:mysql://localhost:3306/schljsp</param-value>
