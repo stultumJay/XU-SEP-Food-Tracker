@@ -1,0 +1,114 @@
+/* Remove *, section, h2, button, @keyframes animateBg from this file. Link common-style.css in signup.jsp. */
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
+  background: #f0f0f0;
+  color: #333;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-box {
+  position: relative;
+  width: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, .5);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(15px);
+  padding: 20px;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+  border-bottom: 2px solid #fff;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #fff;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  line-height: 57px;
+}
+
+.login-link {
+  font-size: .9em;
+  color: #fff;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.login-link p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 360px) {
+  .signup-box {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+  }
+  .input-box {
+    width: 290px;
+  }
+}
+
+/* Popup message styles moved from signup.jsp */
+.popup-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1em;
+  background-color: #4CAF50;
+  color: white;
+  display: none;
+  z-index: 1000;
+}
+.popup-message.error {
+  background-color: #f44336;
+}
