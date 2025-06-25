@@ -56,6 +56,8 @@ function removeItem() {
 function changeQty() {
   if (isNaN(this.value) || this.value < 1) {
     this.value = 1;
+  } else if (this.value > 20) {
+    this.value = 20;
   }
   loadContent();
 }
